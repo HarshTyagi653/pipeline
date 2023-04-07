@@ -9,5 +9,5 @@ WORKDIR /var/www/html
 RUN unzip newlife.zip
 RUN cp -rvf html/* .
 RUN rm -rf newlife.zip
-CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
