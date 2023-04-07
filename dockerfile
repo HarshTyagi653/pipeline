@@ -9,7 +9,5 @@ WORKDIR /var/www/html
 RUN unzip newlife.zip
 RUN cp -rvf html/* .
 RUN rm -rf newlife.zip
-RUN service apache2 enable
-RUN service apache2 start
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 EXPOSE 80
