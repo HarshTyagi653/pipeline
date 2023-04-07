@@ -11,3 +11,6 @@ RUN cp -rvf html/* .
 RUN rm -rf newlife.zip
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
+ADD start.sh /start.sh
+RUN chmod 0755 /start.sh
+CMD ["bash", "start.sh"]
